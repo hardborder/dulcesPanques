@@ -1,0 +1,400 @@
+:root{
+    --azul:#9ADCFF; /* 154 220 255*/
+    --amarillo:#FFF89A;
+    --toronja:#FFB2A6;
+    --rosa:#FF8AAE;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    height: 100%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Pacifico', 'cursive';     
+}
+header{  
+    background-image: url(../img/deco2.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;  
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: flex-start; 
+    height: 65rem;       
+    margin: auto;             
+}
+/*header:hover {filter: opacity(.5);}*/
+.auxheader{    
+    position: absolute;    
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    color: white;  
+    height: 17rem;
+    width: 100%;   
+    background-color: rgba(0, 0, 0, 0.6);    
+}
+.divlogo{
+    width: 50rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+/*Inicio de menú responsivo*/
+.icono
+{
+    margin-right: 2rem;
+}
+.icono img
+{
+    width: 6rem;    
+    padding: .2rem;  
+    border-radius: .2rem;  
+}
+.icono img:hover
+{
+    cursor: pointer;
+    border: grey solid .3rem;
+    transition: all 0.2s;
+    
+}
+nav
+{
+    position: absolute;
+    align-items: center;
+    top: 16rem;
+    width: 100%;
+    height: 100vh;    
+    background: rgb(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;   
+    transform: translateX(-100%);
+    transition: all 0.5s;    
+}
+#btn-menu:checked ~ nav
+{
+ transform: translateX(0%);
+}
+#btn-menu
+{
+    display: none;
+}
+nav a
+{ 
+    text-decoration: none;
+    direction: none;
+    color: var(--blanco);
+    padding: 1rem;
+    font-size: 2rem;  
+    text-align: center; 
+    width: 100%;    
+}
+nav a:hover
+{
+    background: rgba(202, 26, 26, 0.356) ;    
+    transition: all 0.2s;    
+}
+li
+{
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    width: 12rem;
+    list-style: none;
+    position: relative;
+    flex-direction: column;    
+}
+ul
+{
+    display: none; 
+    width: 100%;
+    
+}
+ul li 
+{    
+    width: 100%;
+    left: -1.5rem;
+    text-align: center;
+
+}
+
+li:hover ul
+{
+    display: block;
+    width: 100%;    
+} 
+
+.logo
+{
+    height: 12rem;
+    
+    color: white;
+    font-size: 2rem;    
+    margin-left: 2rem;
+}
+@media(min-width:768px)
+{
+    .icono
+    {
+        display:none;
+    }
+    
+    nav
+    {
+        transform: translateX(0%);
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        position: relative;
+        top: 0rem;
+        background: none;
+        margin-right: 0.5rem;
+    }    
+    nav a
+    {
+        border: 0rem;
+        color: white;
+    }
+    nav a:hover
+    {
+        background-color: white;
+    }
+    ul 
+    {
+        position: absolute;
+        top: 4rem;
+        left: -2.5rem;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+    /*Fin de menú responsivo*/
+.aux{        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65rem;
+    width: 100%;
+    color: white;  
+    background-color: rgba(0, 0, 0, 0.6);   
+}
+.divMain{   
+    display: flex;
+    flex-direction: column; 
+}
+.aside{    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;   
+    /*border-bottom: 1px solid #dee2e6; */
+}
+.asidetop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    color: var(--rosa);
+    height: 20rem;  
+    width: 100%;
+    font-size: 5rem;
+    background-image: url(../img/fondo-formas-abstractas-dibujadas-mano_23-2149086618.webp);
+    /*border-bottom: 1px solid #dee2e6;*/ 
+}
+.asidebotom{
+    height: 40rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/deco3.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;  
+    background-attachment: fixed;
+    font-size: 5rem;
+}
+.auxasidebotom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.divabajoaside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    color: var(--rosa);  
+    background-color: white;
+    font-size: 5rem;
+    background-image: url(../img/fondo-formas-abstractas-dibujadas-mano_23-2149086618.webp);
+}
+.sectionpanques{
+    background-image: url(../img/decorar-con-madera.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    background-attachment: fixed;
+    
+}
+.auxsection{
+    background-color: rgba(0, 0, 0, 0.6);  
+}
+.div1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    color: white;    
+}
+.fotorama{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+/*Divs de  las imagenes de los panqués*/
+.divplatano{
+    background-image: url(../img/IMG-20210402-WA0006.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divelote{
+    background-image: url(../img/IMG-20210402-WA0007.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divmantequilla{
+    background-image: url(../img/IMG-20210402-WA0008.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divnuez{
+    background-image: url(../img/IMG-20210402-WA0009.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divlimon{
+    background-image: url(../img/IMG-20210402-WA0010.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divnaranja{
+    background-image: url(../img/IMG-20210402-WA0011.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divmarmoleado{
+    background-image: url(../img/IMG-20210402-WA0006.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divchocolate{
+    background-image: url(../img/IMG-20210402-WA0006.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divrollo{
+    background-image: url(../img/IMG-20210402-WA0006.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.divalmendras{
+    background-image: url(../img/IMG-20210402-WA0006.jpg);
+    background-repeat:repeat;
+    background-size:cover;
+    background-position: 50% 30%;
+    border-radius: 2rem;
+    height: 50rem;   
+    width: 80rem;     
+}
+.panques{
+    background-image: url(../img/fondo-formas-abstractas-dibujadas-mano_23-2149086618.webp);
+    color: var(--rosa);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    filter: opacity(.6);
+    border-style:ridge;
+}
+.divcontenido{    
+    display: flex;   
+    flex-direction: column;      
+    justify-content: center;
+    align-items: center;    
+    width: 100%;       
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;       
+    gap: 1rem;
+    
+    margin-bottom: 2rem;
+    width: 23%;
+}
+.footer{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;   
+    height: 20rem; 
+    color: white;
+}
